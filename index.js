@@ -37,7 +37,6 @@ while (repetir) {
     } else {
         repetir= false;
         alert("Gracias por usar nuestro servicio de conversión");
-        alert(i);
         break;
     }
 }
@@ -66,6 +65,7 @@ function temperatura(opcConversion) {
             valorConver = convertirCelsiusAFahrenheit(valor);
             alert(valor + " Celsius son " + valorConver + " Fahrenheit");
             registroHistorial("temperatura",valor,"Celsius",valorConver,"Fahrenheit");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -369,7 +369,7 @@ function convertirEuroAPesoCO(euro) {
 
 // Función para convertir Euro a Dolar
 function convertirEuroADolar(euro) {
-    dolar = euro * 1, 07;
+    dolar = euro * 1.07;
     return dolar;
 }
 
@@ -401,5 +401,11 @@ function registroHistorial(opcion,valorInicial,unidadInicial,valorConversion,uni
     registro = {"icono":icono,"opcConversion":opcion,"valorInicial":valorInicial,"unidadInicial":unidadInicial,"valorConversion":valorConversion,"unidadConver":unidadConver};
     historial.push(registro);
     return historial;
+}
 
+function agregarFila() {
+    document.getElementById('tablaprueba').insertRow(-1).innerHTML = '<td><img src="'+historial[historial.length - 1].icono+
+    '"></td><td>'+historial[historial.length - 1].opcConversion+'</td><td>'+historial[historial.length - 1].valorInicial+
+    '</td><td>'+historial[historial.length - 1].unidadInicial+'</td><td>'+historial[historial.length - 1].valorConversion+'</td><td>'+historial[historial.length - 1].unidadConver+'</td>'
+    return;
 }
