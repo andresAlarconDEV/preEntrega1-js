@@ -5,7 +5,6 @@ const menu = "Por favor escribe la opción de acuerdo al sistema de unidades que
 const noValor = "No se ingreso ningun valor";
 let i = 0, test, celsius, kelvin, fahrenheit, metro, kilometro, milla, pesoCo, dolar, euro, repetir=true, opcionMenu, opcConversion, registro;
 let historial = [];
-
 while (repetir) {
     // if validar mensaje bienvenida
     menuOpc();
@@ -42,7 +41,7 @@ while (repetir) {
 }
 
 
-// Ciclo para realizar múltiples conversiones
+
 
 /////////////
 //FUNCIONES//
@@ -76,6 +75,7 @@ function temperatura(opcConversion) {
             valorConver = convertirCelsiusAKelvin(valor);
             alert(valor + " Celsius son " + valorConver + " Kelvin");
             registroHistorial("temperatura",valor,"Celsius",valorConver,"Kelvin");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -86,6 +86,7 @@ function temperatura(opcConversion) {
             valorConver = convertirFahrenheitACelsius(valor);
             alert(valor + " Fahrenheit son " + valorConver + " Celsius");
             registroHistorial("temperatura",valor,"Fahrenheit",valorConver,"Celsius");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -96,6 +97,7 @@ function temperatura(opcConversion) {
             valorConver = convertirFahrenheitAKelvin(valor);
             alert(valor + " Fahrenheit son " + valorConver + " Kelvin");
             registroHistorial("temperatura",valor,"Fahrenheit",valorConver,"Kelvin");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -106,6 +108,7 @@ function temperatura(opcConversion) {
             valorConver = convertirKelvinACelsius(valor);
             alert(valor + " Kelvin son " + valorConver + " Celsius");
             registroHistorial("temperatura",valor,"Kelvin",valorConver,"Celsius");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -116,6 +119,7 @@ function temperatura(opcConversion) {
             valorConver = convertirKelvinAFahrenheit(valor);
             alert(valor + " Kelvin son " + valorConver + " Fahrenheit");
             registroHistorial("temperatura",valor,"Kelvin",valorConver,"Fahrenheit");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -134,6 +138,7 @@ function longitud(opcConversion) {
             valorConver = convertirMetroAKilometro(valor);
             alert(valor + " metros son " + valorConver + " kilometros");
             registroHistorial("longitud",valor,"metros",valorConver,"kilometros");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -144,6 +149,7 @@ function longitud(opcConversion) {
             valorConver = convertirMetroAMilla(valor);
             alert(valor + " metros son " + valorConver + " millas");
             registroHistorial("longitud",valor,"metros",valorConver,"millas");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -154,6 +160,7 @@ function longitud(opcConversion) {
             valorConver = convertirKilometroAMetro(valor);
             alert(valor + " kilometros son " + valorConver + " metros");
             registroHistorial("longitud",valor,"kilometros",valorConver,"metros");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -164,6 +171,7 @@ function longitud(opcConversion) {
             valorConver = convertirKilometroAMilla(valor);
             alert(valor + " kilometros son " + valorConver + " millas");
             registroHistorial("longitud",valor,"kilometros",valorConver,"millas");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -174,6 +182,7 @@ function longitud(opcConversion) {
             valorConver = convertirMillaAMetro(valor);
             alert(valor + " millas son " + valorConver + " metros");
             registroHistorial("longitud",valor,"millas",valorConver,"metros");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -184,6 +193,7 @@ function longitud(opcConversion) {
             valorConver = convertirMillaAKilometro(valor);
             alert(valor + " millas son " + valorConver + " kilometros");
             registroHistorial("longitud",valor,"millas",valorConver,"kilometros");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -202,6 +212,7 @@ function moneda(opcConversion) {
             valorConver = convertirPesoCOADolar(valor);
             alert(valor + " pesos colombianos son " + valorConver + " dolares");
             registroHistorial("moneda",valor,"pesos colombianos",valorConver,"dolares");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -212,6 +223,7 @@ function moneda(opcConversion) {
             valorConver = convertirPesoCOAEuro(valor);
             alert(valor + " pesos colombianos son " + valorConver + " euros");
             registroHistorial("moneda",valor,"pesos colombianos",valorConver,"euros");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -222,6 +234,7 @@ function moneda(opcConversion) {
             valorConver = convertirDolarAPesoCO(valor);
             alert(valor + " dolares son " + valorConver + " pesos colombianos");
             registroHistorial("moneda",valor,"dolares",valorConver,"pesos colombianos");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -232,6 +245,7 @@ function moneda(opcConversion) {
             valorConver = convertirDolarAEuro(valor);
             alert(valor + " dolares son " + valorConver + " euros");
             registroHistorial("moneda",valor,"dolares",valorConver,"euros");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -242,6 +256,7 @@ function moneda(opcConversion) {
             valorConver = convertirEuroAPesoCO(valor);
             alert(valor + " euros son " + valorConver + " pesos colombianos");
             registroHistorial("moneda",valor,"euros",valorConver,"pesos colombianos");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -252,6 +267,7 @@ function moneda(opcConversion) {
             valorConver = convertirEuroADolar(valor);
             alert(valor + " euros son " + valorConver + " dolares");
             registroHistorial("moneda",valor,"euros",valorConver,"dolares");
+            agregarFila();
             } else {
             alert(noValor);
             }
@@ -404,8 +420,21 @@ function registroHistorial(opcion,valorInicial,unidadInicial,valorConversion,uni
 }
 
 function agregarFila() {
-    document.getElementById('tablaprueba').insertRow(-1).innerHTML = '<td><img src="'+historial[historial.length - 1].icono+
-    '"></td><td>'+historial[historial.length - 1].opcConversion+'</td><td>'+historial[historial.length - 1].valorInicial+
+    let cantTemp = 0, cantLong = 0, cantMon = 0;
+    document.getElementById('tablaHistorial').insertRow(-1).innerHTML = '<td><img src="'+historial[historial.length - 1].icono +
+    '" class="imgIcono"></td><td>'+historial[historial.length - 1].opcConversion+'</td><td>'+historial[historial.length - 1].valorInicial+
     '</td><td>'+historial[historial.length - 1].unidadInicial+'</td><td>'+historial[historial.length - 1].valorConversion+'</td><td>'+historial[historial.length - 1].unidadConver+'</td>'
+    cantTemp = contar('temperatura');
+    cantLong = contar('longitud');
+    cantMon = contar('moneda');
+    document.getElementById('cantTemp').innerHTML = cantTemp;
+    document.getElementById('cantLong').innerHTML = cantLong;
+    document.getElementById('cantMon').innerHTML = cantMon;
     return;
+}
+
+
+function contar(opcion) {
+    let cant = historial.filter(opc => opc.opcConversion==opcion).length;
+    return cant;
 }

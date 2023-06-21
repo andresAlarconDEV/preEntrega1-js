@@ -15,7 +15,8 @@
             <h1>Bienvenido al conversor de Unidades</h1>
         </div>
         <div class="divHistorial">
-            <table class="table" id="tablaprueba">
+            <h2>Historial</h2>
+            <table class="table table-hover" id="tablaHistorial">
                 <thead>
                   <tr>
                     <th scope="col"></th>
@@ -30,6 +31,35 @@
                   
                 </tbody>
               </table>
+        </div>
+        <div class="divResumen">
+            <h2>Resumen</h2>
+            <table class="table table-hover" id="tablaHistorial">
+                <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">Opción de conversión</th>
+                      <th scope="col">Cantidad</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td><img src="./iconos/temperatura.png" class="imgIcono"></td>
+                    <th scope="row">Temperatura</th>
+                    <td id="cantTemp"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="./iconos/longitud.png" class="imgIcono"></td>
+                    <th scope="row">Longitud</th>
+                    <td id="cantLong"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="./iconos/monedas.png" class="imgIcono"></td>
+                    <th scope="row">Moneda</th>
+                    <td id="cantMon"></td>
+                  </tr>
+                  </tbody>
+            </table>
         </div>
     </header>
     <script src="./index.js"></script>

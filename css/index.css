@@ -5,5 +5,20 @@
 
 .divHistorial {
     margin: auto;
+    margin-top: 80px;
+    margin-bottom: 50px;
     width: 80%;
+    text-align: center;
 }
+
+.imgIcono {
+    width: 20px;
+}
+
+.divResumen {
+    margin: auto;
+    margin-bottom: 50px;
+    width: 50%;
+    text-align: center;
+}
+
